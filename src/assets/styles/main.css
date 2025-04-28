@@ -1,0 +1,8 @@
+@import "./normalize.css";
+@import "./global.css";
+
+/* blocks */
+@import "./blocks/page.css";
+@import "./blocks/header.css";
+@import "./blocks/content.css";
+@import "./blocks/footer.css";
