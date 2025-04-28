@@ -1,0 +1,31 @@
+
+.page {
+	width: 100%;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	color: #ffffff;
+	background-color: #181f2a;
+}
+
+.page__container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 45px 0 60px;
+}
+
+@media screen and (max-width: 424px) {
+	.page__container {
+		padding: 28px 0 36px;
+	}
+}
+
+.page__footer {
+	margin: 66px auto 0;
+}
+
+@media screen and (max-width: 424px) {
+	.page__footer {
+		margin: 48px auto 0;
+	}
+}
