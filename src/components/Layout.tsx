@@ -1,3 +1,4 @@
+import { Outlet } from "react-router"
 import { ErrorBoundary } from "./ErrorBoundary"
 import { Footer } from "./Footer"
 import { Header } from "./Header"
@@ -9,8 +10,8 @@ export const Layout = (): React.ReactElement => {
             <div className="page">
                 <div className="page__container">
                     <Header />
-                    <Main />
-                    <Footer className='page__footer'/>
+                    <Main ><Outlet /></Main>
+                    <Footer className='page__footer' />
                 </div>
             </div>
         </ErrorBoundary>
