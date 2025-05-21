@@ -1,15 +1,9 @@
 import { withLoader } from "../hocs/withLoader";
-
-export interface IPost {
-    "id": number,
-    "userId": number,
-    "title": string,
-    "body": string,
-}
+import { Post } from "../types/post";
 
 export type PostListProps = {
     className?: string;
-    posts?: IPost[];
+    posts?: Post[];
 }
 
 export const PostList = ({ className, posts = [] }: PostListProps): React.ReactElement => {
