@@ -1,9 +1,10 @@
-import { useFetch } from "../hooks/useFetch";
-import { PostsListWithLoader, type IPost } from "../components/PostList";
+import { PostsListWithLoader } from "../components/PostList";
+import { useGetPostsQuery } from "../services/postsApi.service";
 
 
 export const HomePage = (): React.ReactElement | null => {
-    const { data: posts, isLoading } = useFetch<IPost[]>(`https://jsonplaceholder.typicode.com/posts?_limit=3`);
+    const { data: posts, isLoading } = useGetPostsQuery();
+    const limitedPosts = posts?.slice(0, 3);
 
-    return <PostsListWithLoader isLoading={isLoading} posts={posts} />
+    return <PostsListWithLoader isLoading={isLoading} posts={limitedPosts} />
 }
